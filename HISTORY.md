@@ -19,3 +19,4 @@
 1. [`ng generate service housing`](https://angular.io/tutorial/first-app/first-app-lesson-09)
 1. [Add routes to the application](https://angular.io/tutorial/first-app/first-app-lesson-10)
 1. [Integrate details page into application](https://angular.io/tutorial/first-app/first-app-lesson-11)
+1. [Adding a form to your Angular app](https://angular.io/tutorial/first-app/first-app-lesson-12)

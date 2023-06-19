@@ -1,24 +1,40 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { HousingService } from '../../services/housing/housing.service';
-import { HousingLocation } from '../../types/housing-location/housing-location.types';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Optional } from '../../../types/none';
+import { HousingService } from '../../services/housing/housing.service';
+import {
+  Customer,
+  HousingLocation,
+} from '../../types/housing-location/housing-location.types';
+
+const customerFormGroup = new FormGroup({
+  firstName: new FormControl(''),
+  lastName: new FormControl(''),
+  eMail: new FormControl(''),
+});
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent {
+  form = customerFormGroup;
   route: ActivatedRoute = inject(ActivatedRoute);
-  housingService = inject(HousingService);
+  housingService: HousingService = inject(HousingService);
   housingLocation: Optional<HousingLocation>;
 
   constructor() {
     const id = Number(this.route.snapshot.params['id']);
     this.housingLocation = this.housingService.getById(id);
+  }
+
+  submit() {
+    const oCustomer: Customer = Customer.createFromForm(this.form.value);
+    this.housingService.submit(oCustomer);
   }
 }

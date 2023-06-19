@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Optional } from '../../../types/none';
-import { HousingLocation } from '../../types/housing-location/housing-location.types';
+import {
+  Customer,
+  HousingLocation,
+} from '../../types/housing-location/housing-location.types';
 import locations from '../../../assets/mock/locations.json';
 
 @Injectable({
@@ -15,5 +18,9 @@ export class HousingService {
 
   getById(id: number): Optional<HousingLocation> {
     return this.data.find((housingLocation) => housingLocation.id === id);
+  }
+
+  submit(customer: Customer): void {
+    console.log('HousingService.submit(customer)', customer);
   }
 }
