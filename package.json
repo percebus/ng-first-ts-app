@@ -1,7 +1,7 @@
 {
-  "name": "ng-tower-of-heroes-ts-app",
+  "name": "ng-first-ts-app",
   "version": "0.1.0",
-  "description": "Angular Tower of Heroes TypeScrip App",
+  "description": "Angular First TypeScrip App",
   "main": "index.js",
   "scripts": {
     "npm:install:global:ci": "npm install --location=global @angular/cli",
@@ -34,20 +34,19 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/percebus/ng-tower-of-heroes-ts-app.git"
+    "url": "git+ssh://git@github.com/percebus/ng-first-ts-app.git"
   },
   "keywords": [
     "angular",
-    "tower",
     "typescript",
     "app"
   ],
   "author": "percebus",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/percebus/ng-tower-of-heroes-ts-app/issues"
+    "url": "https://github.com/percebus/ng-first-ts-app/issues"
   },
-  "homepage": "https://github.com/percebus/ng-tower-of-heroes-ts-app#readme",
+  "homepage": "https://github.com/percebus/ng-first-ts-app#readme",
   "dependencies": {
     "@angular/animations": "^16.1.0",
     "@angular/common": "^16.1.0",

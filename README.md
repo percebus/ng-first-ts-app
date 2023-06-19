@@ -1,11 +1,10 @@
-# Angular "Tower of Heroes" Tutorial
+# Angular First Tutorial
 
 [`ng README`](./ngREADME.md) | [`HISTORY`](./HISTORY.md)
 
 ## Tutorials
 
 - [Your first Angular app](https://angular.io/tutorial/first-app)
-- [Tour of Heroes](https://angular.io/tutorial)
 
 ## Resources
 
