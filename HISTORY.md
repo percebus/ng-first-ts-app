@@ -16,3 +16,4 @@
 1. [Add a property binding to a component’s template](https://angular.io/tutorial/first-app/first-app-lesson-06)
 1. [Add an interpolation to a component’s template](https://angular.io/tutorial/first-app/first-app-lesson-07)
 1. [Use `*ngFor` to list objects in component](https://angular.io/tutorial/first-app/first-app-lesson-08)
+1. [`ng generate service housing`](https://angular.io/tutorial/first-app/first-app-lesson-09)
