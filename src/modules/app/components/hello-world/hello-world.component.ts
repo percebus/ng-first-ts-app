@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'component-hello-world',
+  selector: 'hello-world-component',
   templateUrl: './hello-world.component.html',
   styleUrls: ['./hello-world.component.scss'],
 })

@@ -21,8 +21,9 @@
     "style": "npm run prettier:write",
     "browser": "open-cli http://localhost:4200",
     "prebuild": "npm run lint",
-    "dist:default": "npm run ng:build",
-    "dist:production": "npm run ng:build -- -c production",
+    "dist:development": "npm run ng:build -- --configuration development",
+    "dist:production": "npm run ng:build -- --configuration production",
+    "dist": "npm run ng:build",
     "pretest": "npm run style",
     "test": "npm run ng:test",
     "prestart": "npm run browser",
@@ -70,6 +71,7 @@
     "@angular/cli": "~16.1.0",
     "@angular/compiler-cli": "^16.1.0",
     "@types/jasmine": "~4.3.0",
+    "@types/node": "^20.3.1",
     "@typescript-eslint/eslint-plugin": "5.59.7",
     "@typescript-eslint/parser": "5.59.7",
     "eslint": "^8.40.0",
@@ -82,6 +84,8 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^2.8.8",
+    "protractor": "^7.0.0",
+    "ts-node": "^10.9.1",
     "typescript": "~5.1.3"
   }
 }
