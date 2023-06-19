@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingLocation } from '../housing-location/housing-location';
+import { HousingLocationComponent } from '../housing-location/housing-location.component';
+import locations from '../../../assets/mock/locations.json';
 
 @Component({
   selector: 'app-home',
@@ -11,14 +12,6 @@ import { HousingLocation } from '../housing-location/housing-location';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  housingLocation: HousingLocation = {
-    id: 9999,
-    name: 'Test Home',
-    city: 'Test city',
-    state: 'ST',
-    photo: 'assets/example-house.jpg',
-    availableUnits: 99,
-    wifi: true,
-    laundry: false,
-  };
+  housingLocation: HousingLocation = locations[0]; // XXX
+  data: Array<HousingLocation> = [];
 }

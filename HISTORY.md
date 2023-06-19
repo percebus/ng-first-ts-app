@@ -8,3 +8,5 @@
 1. [`ng generate component Home`](https://angular.io/tutorial/first-app/first-app-lesson-02)
 1. [`ng generate component HousingLocation`](https://angular.io/tutorial/first-app/first-app-lesson-03)
 1. [`ng generate interface HousingLocation`](https://angular.io/tutorial/first-app/first-app-lesson-04)
+1. [Add a property binding to a component’s template](https://angular.io/tutorial/first-app/first-app-lesson-06)
+1. [Add an interpolation to a component’s template](https://angular.io/tutorial/first-app/first-app-lesson-07)
