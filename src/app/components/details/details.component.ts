@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HousingService } from '../../services/housing/housing.service';
-import { HousingLocation } from '../../components/housing-location/housing-location';
+import { HousingLocation } from '../../types/housing-location/housing-location.types';
 import { Optional } from '../../../types/none';
 
 @Component({

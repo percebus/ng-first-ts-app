@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Optional } from '../../../types/none';
-import { HousingLocation } from '../../components/housing-location/housing-location';
+import { HousingLocation } from '../../types/housing-location/housing-location.types';
 import locations from '../../../assets/mock/locations.json';
 
 @Injectable({
