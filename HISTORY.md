@@ -7,3 +7,4 @@
 1. Refactored `AppComponent` as `modules/demo/demo.component.ts`
 1. [`ng generate component Home`](https://angular.io/tutorial/first-app/first-app-lesson-02)
 1. [`ng generate component HousingLocation`](https://angular.io/tutorial/first-app/first-app-lesson-03)
+1. [`ng generate interface HousingLocation`](https://angular.io/tutorial/first-app/first-app-lesson-04)
