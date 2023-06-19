@@ -11,5 +11,6 @@
 
 - [What is Angular?](https://angular.io/guide/what-is-angular)
 - [CLI Overview and Command Reference](https://angular.io/cli)
+- [Getting started with standalone components](https://angular.io/guide/standalone-components)
 - [Angular Folder Structure](https://medium.com/@motcowley/angular-folder-structure-d1809be95542)
 - [How to define a highly scalable folder structure for your Angular project](https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7)
