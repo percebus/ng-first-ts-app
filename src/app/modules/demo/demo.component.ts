@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./demo.component.scss'],
 })
 export class DemoComponent {
-  title = 'ng-tower-of-heroes-ts-app';
+  title = 'demo';
 }

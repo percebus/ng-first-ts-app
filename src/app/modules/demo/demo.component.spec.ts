@@ -1,33 +1,42 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DemoComponent } from './demo.component';
 
 describe('DemoComponent', () => {
-  beforeEach(() =>
+  let demoFixtureComponent: ComponentFixture<DemoComponent>;
+  let oDemoComponent: DemoComponent;
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       declarations: [DemoComponent],
-    })
-  );
+    });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(DemoComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    demoFixtureComponent = TestBed.createComponent(DemoComponent);
+    demoFixtureComponent.detectChanges();
+    oDemoComponent = demoFixtureComponent.componentInstance;
   });
 
-  it(`should have as title 'ng-tower-of-heroes-ts-app'`, () => {
-    const fixture = TestBed.createComponent(DemoComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('ng-tower-of-heroes-ts-app');
-  });
+  describe('FixtureComponent', () => {
+    describe('ComponentInstance', () => {
+      it('is instanciated', () => {
+        expect(oDemoComponent).toBeTruthy();
+      });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(DemoComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain(
-      'ng-tower-of-heroes-ts-app app is running!'
-    );
+      describe('title', () => {
+        it(`equals 'demo'`, () => {
+          expect(oDemoComponent.title).toEqual('demo');
+        });
+
+        describe('.content span', () => {
+          it('contains "{title} is running!"', () => {
+            const oHTMLElement =
+              demoFixtureComponent.nativeElement as HTMLElement;
+            const textContent =
+              oHTMLElement.querySelector('.content span')?.textContent;
+            expect(textContent).toContain('demo app is running!');
+          });
+        });
+      });
+    });
   });
 });
