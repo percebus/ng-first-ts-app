@@ -1,7 +1,7 @@
 {
   "endOfLine": "auto",
   "overrides": [
-    {"files": "*.html", "options": {"parser": "html"}},
-    {"files": "*.component.html", "options": {"parser": "angular"}}
+    { "files": "*.html", "options": { "parser": "html" } },
+    { "files": "*.component.html", "options": { "parser": "angular" } }
   ]
 }
