@@ -1,0 +1,73 @@
+{
+  "name": "ng-tower-of-heroes-ts-app",
+  "version": "0.1.0",
+  "description": "Angular Tower of Heroes TypeScrip App",
+  "main": "index.js",
+  "scripts": {
+    "npm:install:global": "npm install --location=global @angular/cli",
+    "setup": "npm run npm:install:global",
+    "setup:ci": "npm run npm:install:global",
+    "prettier": "prettier .",
+    "prettier:check": "npm run prettier -- --check",
+    "prettier:write": "npm run prettier -- --write",
+    "ng": "ng",
+    "ng:lint": "npm run ng -- lint",
+    "ng:serve": "npm run ng -- serve",
+    "ng:build": "npm run ng -- build",
+    "ng:build:watch": "npm run ng:build -- --watch --configuration development",
+    "ng:test": "npm run ng -- test",
+    "lint": "npm run prettier:check && npm run ng:lint",
+    "style": "npm run prettier:write",
+    "prebuild": "npm run lint",
+    "build": "npm run ng:build",
+    "pretest": "npm run style",
+    "test": "npm run ng:test",
+    "predev": "npm test",
+    "dev": "npm run ng:build:watch",
+    "start": "npm run ng:serve"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/percebus/ng-tower-of-heroes-ts-app.git"
+  },
+  "keywords": [
+    "angular",
+    "tower",
+    "typescript",
+    "app"
+  ],
+  "author": "percebus",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/percebus/ng-tower-of-heroes-ts-app/issues"
+  },
+  "homepage": "https://github.com/percebus/ng-tower-of-heroes-ts-app#readme",
+  "dependencies": {
+    "@angular/animations": "^16.1.0",
+    "@angular/common": "^16.1.0",
+    "@angular/compiler": "^16.1.0",
+    "@angular/core": "^16.1.0",
+    "@angular/forms": "^16.1.0",
+    "@angular/platform-browser": "^16.1.0",
+    "@angular/platform-browser-dynamic": "^16.1.0",
+    "@angular/router": "^16.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.1.0",
+    "@angular/cli": "~16.1.0",
+    "@angular/compiler-cli": "^16.1.0",
+    "@types/jasmine": "~4.3.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "^2.8.8",
+    "typescript": "~5.1.3"
+  }
+}
