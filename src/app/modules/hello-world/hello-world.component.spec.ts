@@ -3,19 +3,19 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HelloWorldComponent } from './hello-world.component';
 
 describe('HelloWorldComponent', () => {
-  let component: HelloWorldComponent;
-  let fixture: ComponentFixture<HelloWorldComponent>;
-
+  let oFixtureComponent: ComponentFixture<HelloWorldComponent>;
+  let oHelloWorldComponent: HelloWorldComponent;
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [HelloWorldComponent],
     });
-    fixture = TestBed.createComponent(HelloWorldComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+
+    oFixtureComponent = TestBed.createComponent(HelloWorldComponent);
+    oFixtureComponent.detectChanges();
+    oHelloWorldComponent = oFixtureComponent.componentInstance;
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('is instanciated', () => {
+    expect(oHelloWorldComponent).toBeInstanceOf(HelloWorldComponent);
   });
 });

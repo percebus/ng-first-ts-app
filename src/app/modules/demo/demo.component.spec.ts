@@ -16,26 +16,23 @@ describe('DemoComponent', () => {
     oDemoComponent = demoFixtureComponent.componentInstance;
   });
 
-  describe('FixtureComponent', () => {
-    describe('ComponentInstance', () => {
-      it('is instanciated', () => {
-        expect(oDemoComponent).toBeTruthy();
-      });
+  it('is instanciated', () => {
+    expect(oDemoComponent).toBeInstanceOf(DemoComponent);
+  });
 
-      describe('title', () => {
-        it(`equals 'demo'`, () => {
-          expect(oDemoComponent.title).toEqual('demo');
-        });
+  describe('title', () => {
+    it(`equals 'demo'`, () => {
+      expect(oDemoComponent.title).toEqual('demo');
+    });
 
-        describe('.content span', () => {
-          it('contains "{title} is running!"', () => {
-            const oHTMLElement =
-              demoFixtureComponent.nativeElement as HTMLElement;
-            const textContent =
-              oHTMLElement.querySelector('.content span')?.textContent;
-            expect(textContent).toContain('demo app is running!');
-          });
-        });
+    describe('HTML', () => {
+      it('contains "{title} is running!"', () => {
+        const oHTMLElement: HTMLElement = demoFixtureComponent.nativeElement;
+
+        const textContent =
+          oHTMLElement.querySelector('.content span')?.textContent;
+
+        expect(textContent).toContain('demo app is running!');
       });
     });
   });
