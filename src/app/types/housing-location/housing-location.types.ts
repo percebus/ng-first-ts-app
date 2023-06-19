@@ -13,13 +13,13 @@ export interface HousingLocation {
 
 // TODO? RENAME?
 // XXX? Is it really needed?
-export interface CustomerForm {
+export interface CustomerData {
   firstName: Tentative<string>;
   lastName: Tentative<string>;
   eMail: Tentative<string>;
 }
 
-export class Customer implements CustomerForm {
+export class Customer implements CustomerData {
   firstName: Tentative<string>;
   lastName: Tentative<string>;
   eMail: Tentative<string>;
@@ -32,7 +32,7 @@ export class Customer implements CustomerForm {
     });
   }
 
-  constructor(data: Partial<CustomerForm> = {}) {
+  constructor(data: Partial<CustomerData> = {}) {
     Object.assign(this, data);
   }
 }
