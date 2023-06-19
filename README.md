@@ -14,3 +14,4 @@
 - [Getting started with standalone components](https://angular.io/guide/standalone-components)
 - [Angular Folder Structure](https://medium.com/@motcowley/angular-folder-structure-d1809be95542)
 - [How to define a highly scalable folder structure for your Angular project](https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7)
+- [How to Read Local JSON Files & Deploy an Angular App](https://blog.bitsrc.io/how-to-read-local-json-files-deploy-an-angular-app-a96a881036f2)
