@@ -12,6 +12,5 @@ import locations from '../../../assets/mock/locations.json';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  housingLocation: HousingLocation = locations[0]; // XXX
-  data: Array<HousingLocation> = [];
+  data: Array<HousingLocation> = locations;
 }
