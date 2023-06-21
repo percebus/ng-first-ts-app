@@ -23,7 +23,7 @@ RUN ls ./dist -la
 FROM project as http-server
 WORKDIR /usr/app
 COPY --from=project /tmp/project/ .
-COPY --from=dist /tmp/project/dist ./dist
+COPY --from=dist /tmp/project/dist/ ./dist/
 RUN ls -la
 EXPOSE 4200
 ENTRYPOINT [ "npm" ]

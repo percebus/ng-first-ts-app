@@ -8,8 +8,8 @@ services:
       - 3000:3000
 
   webapp:
-    # depends_on:
-    #   - mock-api FIXME?
+    depends_on:
+      - mock-api
     build:
       dockerfile: ./Dockerfile
       target: http-server
