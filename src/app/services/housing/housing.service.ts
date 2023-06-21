@@ -9,7 +9,7 @@ import {
   providedIn: 'root',
 })
 export class HousingService {
-  url = 'http://localhost:3000/locations';
+  url = 'http://localhost:3000/locations'; // FIXME env variable
   data: Array<HousingLocation> = [];
 
   async getAll(): Promise<Array<HousingLocation>> {
