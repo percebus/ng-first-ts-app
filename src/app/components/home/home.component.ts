@@ -13,9 +13,24 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
 })
 export class HomeComponent {
   housingService: HousingService = inject(HousingService);
+  allData: Array<HousingLocation> = [];
   data: Array<HousingLocation> = [];
 
+  filterResults(text: string) {
+    if (!text) {
+      this.data = this.allData;
+      return;
+    }
+
+    const _text = text.toLowerCase();
+    this.data = this.allData.filter((oHousingLocation: HousingLocation) => {
+      const city = oHousingLocation?.city.toLowerCase();
+      return city.includes(_text);
+    });
+  }
+
   constructor() {
-    this.data = this.housingService.getAll();
+    this.allData = this.housingService.getAll();
+    this.data = this.allData;
   }
 }

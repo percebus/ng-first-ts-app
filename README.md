@@ -1,6 +1,6 @@
 # Angular First Tutorial
 
-[`ng README`](./ngREADME.md) | [`HISTORY`](./HISTORY.md)
+[`HISTORY`](./HISTORY.md)
 
 ## Tutorials
 

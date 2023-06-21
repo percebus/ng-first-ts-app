@@ -9,7 +9,7 @@
 ## First App Tutorial
 
 1. [`ng generate component "hello-world"`](https://angular.io/tutorial/first-app/first-app-lesson-01)
-1. Refactored `AppComponent` as `modules/demo/demo.component.ts`
+1. Refactored `AppComponent` as `RootComponent` in `app/components/root/root.component.ts`
 1. [`ng generate component Home`](https://angular.io/tutorial/first-app/first-app-lesson-02)
 1. [`ng generate component HousingLocation`](https://angular.io/tutorial/first-app/first-app-lesson-03)
 1. [`ng generate interface HousingLocation`](https://angular.io/tutorial/first-app/first-app-lesson-04)
@@ -20,3 +20,4 @@
 1. [Add routes to the application](https://angular.io/tutorial/first-app/first-app-lesson-10)
 1. [Integrate details page into application](https://angular.io/tutorial/first-app/first-app-lesson-11)
 1. [Adding a form to your Angular app](https://angular.io/tutorial/first-app/first-app-lesson-12)
+1. [Add the search feature to your app](https://angular.io/tutorial/first-app/first-app-lesson-13)
