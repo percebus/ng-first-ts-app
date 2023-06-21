@@ -29,8 +29,12 @@ export class DetailsComponent {
   housingLocation: Optional<HousingLocation>;
 
   constructor() {
-    const id = Number(this.route.snapshot.params['id']);
-    this.housingLocation = this.housingService.getById(id);
+    const id = parseInt(this.route.snapshot.params['id'], 10);
+    this.housingService
+      .getById(id)
+      .then((location: Optional<HousingLocation>) => {
+        this.housingLocation = location;
+      });
   }
 
   submit() {

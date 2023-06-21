@@ -21,3 +21,4 @@
 1. [Integrate details page into application](https://angular.io/tutorial/first-app/first-app-lesson-11)
 1. [Adding a form to your Angular app](https://angular.io/tutorial/first-app/first-app-lesson-12)
 1. [Add the search feature to your app](https://angular.io/tutorial/first-app/first-app-lesson-13)
+1. [Add HTTP communication to your app](https://angular.io/tutorial/first-app/first-app-lesson-14)

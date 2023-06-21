@@ -30,7 +30,9 @@ export class HomeComponent {
   }
 
   constructor() {
-    this.allData = this.housingService.getAll();
-    this.data = this.allData;
+    this.housingService.getAll().then((locations: Array<HousingLocation>) => {
+      this.allData = locations;
+      this.data = this.allData;
+    });
   }
 }

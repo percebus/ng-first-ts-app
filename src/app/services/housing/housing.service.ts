@@ -4,20 +4,24 @@ import {
   Customer,
   HousingLocation,
 } from '../../types/housing-location/housing-location.types';
-import locations from '../../../assets/mock/locations.json';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HousingService {
-  data: Array<HousingLocation> = locations;
+  url = 'http://localhost:3000/locations';
+  data: Array<HousingLocation> = [];
 
-  getAll(): HousingLocation[] {
-    return this.data;
+  async getAll(): Promise<Array<HousingLocation>> {
+    const response = await fetch(this.url);
+    const locations: HousingLocation[] = (await response.json()) ?? [];
+    return locations;
   }
 
-  getById(id: number): Optional<HousingLocation> {
-    return this.data.find((housingLocation) => housingLocation.id === id);
+  async getById(id: number): Promise<Optional<HousingLocation>> {
+    const response = await fetch(`${this.url}/${id}`);
+    const location: Optional<HousingLocation> = await response.json();
+    return location;
   }
 
   submit(customer: Customer): void {
