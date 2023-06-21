@@ -5,7 +5,7 @@ WORKDIR /project
 COPY . .
 RUN ls -la
 RUN npm run setup:ci --if-present
-RUN npm install
+RUN npm ci
 
 
 FROM project as json-server
@@ -18,9 +18,7 @@ FROM project as dist
 RUN npm run dist
 RUN ls ./dist -la
 
-FROM project as http-server
-COPY --from=dist /project/dist/ ./dist/
-RUN ls -la
+FROM dist as http-server
 EXPOSE 4200
 ENTRYPOINT [ "npm" ]
 CMD [ "run", "http-server" ]
