@@ -9,8 +9,8 @@ RUN npm install
 
 
 FROM project as json-server
-WORKDIR /var/mock-api
-COPY . .
+WORKDIR /var/json-server
+COPY --from=project /tmp/project/ .
 EXPOSE 3000
 ENTRYPOINT [ "npm" ]
 CMD [ "run", "json-server:docker" ]
@@ -22,7 +22,7 @@ RUN ls ./dist -la
 
 FROM project as http-server
 WORKDIR /usr/app
-COPY . .
+COPY --from=project /tmp/project/ .
 COPY --from=dist /tmp/project/dist ./dist
 RUN ls -la
 EXPOSE 4200

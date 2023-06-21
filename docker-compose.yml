@@ -9,7 +9,7 @@ services:
 
   webapp:
     # depends_on:
-    #   - mock-api
+    #   - mock-api FIXME?
     build:
       dockerfile: ./Dockerfile
       target: http-server

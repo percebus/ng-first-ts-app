@@ -4,8 +4,8 @@
   "description": "Angular First TypeScrip App",
   "main": "index.js",
   "scripts": {
-    "npm:install:global:ci": "npm install --location=global @angular/cli http-server json-server",
-    "npm:install:global:all": "npm install --location=global @angular/cli http-server json-server open-cli",
+    "npm:install:global:ci": "npm install --location=global @angular/cli json-server",
+    "npm:install:global:all": "npm install --location=global @angular/cli json-server open-cli",
     "setup": "npm run npm:install:global:all",
     "setup:ci": "npm run npm:install:global:ci",
     "prettier": "prettier .",
@@ -19,7 +19,6 @@
     "ng:test": "npm run ng -- test",
     "lint": "npm run prettier:check && npm run ng:lint",
     "style": "npm run prettier:write",
-    "browser": "open-cli http://localhost:4200",
     "pretest": "npm run style",
     "test": "npm run ng:test",
     "predist": "npm run lint",
@@ -31,7 +30,10 @@
     "json-server:docker": "json-server --watch ./db/locations.json --host 0.0.0",
     "predev": "npm run style && npm run browser",
     "dev": "npm run ng:serve",
-    "start": "npm run http-server"
+    "docker:compose:up": "docker compose up --build",
+    "browser": "open-cli http://localhost:4200",
+    "prestart": "npm run browser",
+    "start": "npm run docker:compose:up"
   },
   "private": true,
   "repository": {
@@ -78,6 +80,7 @@
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "http-server": "^14.1.1",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
