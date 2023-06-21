@@ -26,11 +26,12 @@
     "dist": "npm run ng:build",
     "dist:development": "npm run dist -- --configuration development",
     "dist:production": "npm run dist -- --configuration production",
-    "http-server:dist": "http-server ./dist",
-    "json-server:db": "json-server --watch ./db/locations.json",
+    "http-server": "http-server ./dist",
+    "json-server": "json-server --watch ./db/locations.json",
+    "json-server:docker": "json-server --watch ./db/locations.json --host 0.0.0",
     "predev": "npm run style && npm run browser",
     "dev": "npm run ng:serve",
-    "start": "npm run http-server:dist"
+    "start": "npm run http-server"
   },
   "private": true,
   "repository": {

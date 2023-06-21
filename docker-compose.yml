@@ -1,20 +1,18 @@
 version: "3"
 services:
-  # mock-api:
-  #   build:
-  #     dockerfile: ./Dockerfile
-  #     target: mock-api
-  #   ports:
-  #     - 3000:3000
-  #   environment:
-  #     - PORT=3000
+  mock-api:
+    build:
+      dockerfile: ./Dockerfile
+      target: json-server
+    ports:
+      - 3000:3000
 
   webapp:
     # depends_on:
     #   - mock-api
     build:
       dockerfile: ./Dockerfile
-      target: release
+      target: http-server
     ports:
       - 4200:4200
     environment:
