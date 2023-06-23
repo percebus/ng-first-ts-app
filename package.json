@@ -35,8 +35,8 @@
     "json-server:local": "npm run json-server",
     "prejson-server:docker": "npm run lint",
     "json-server:docker": "npm run json-server -- --host 0.0.0.0",
-    "predev": "npm run style && npm run browser:4200",
-    "dev": "npm run ng:serve",
+    "predev": "npm run style",
+    "dev": "npm run ng:serve -- --open",
     "docker:compose:up": "docker compose up --build --remove-orphans",
     "prestart": "npm run browser:80",
     "start": "npm run docker:compose:up"
