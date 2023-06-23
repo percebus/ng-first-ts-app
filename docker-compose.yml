@@ -7,7 +7,7 @@ services:
     ports:
       - 3000:3000
 
-  webapp:
+  web-app:
     depends_on:
       - mock-api
     build:
