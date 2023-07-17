@@ -1,14 +1,15 @@
 import * as frisby from 'frisby';
 import { Joi } from 'frisby';
+import { headers } from './common';
 
 describe('Housing API', () => {
   ['http'].forEach((protocol) => {
-    const baseURL = `${protocol}://localhost:3000`
+    const baseURL = `${protocol}://localhost:3000`;
 
     describe(`${protocol}:/locations/`, () => {
       const url = `${baseURL}/locations`;
 
-      it('returns Array<HousingLocation>', (done):any => {
+      it('returns Array<HousingLocation>', (): any => {
         // [
         //   {
         //     "id": 0,
@@ -24,7 +25,7 @@ describe('Housing API', () => {
         return frisby
           .get(url)
           .expect('status', 200)
-          .expect('header', 'Content-Type', 'application/json')
+          .expect('header', 'Content-Type', headers['Content-Type'])
           .expect('jsonTypes', '*', {
             id: Joi.number().required(),
             name: Joi.string().required(),
@@ -35,8 +36,7 @@ describe('Housing API', () => {
             availableUnits: Joi.number().required(),
             wifi: Joi.boolean().optional(),
             laundry: Joi.boolean().optional(),
-          })
-          .done(done);
+          });
       });
     });
   });

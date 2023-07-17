@@ -1,9 +1,10 @@
 import * as frisby from 'frisby';
 import { Joi } from 'frisby';
+import { headers } from '../common';
 
 describe('Housing API', () => {
   ['http'].forEach((protocol) => {
-    const baseURL = `${protocol}://localhost:3000`
+    const baseURL = `${protocol}://localhost:3000`;
 
     //   {
     //     "id": 0,
@@ -18,11 +19,11 @@ describe('Housing API', () => {
     describe(`${protocol}:/locations/0`, () => {
       const url = `${baseURL}/locations/0`;
 
-      it('returns a HousingLocation', (done):any => {
+      it('returns a HousingLocation', (): any => {
         return frisby
           .get(url)
           .expect('status', 200)
-          .expect('header', 'Content-Type', 'application/json')
+          .expect('header', 'Content-Type', headers['Content-Type'])
           .expect('jsonTypes', {
             id: Joi.number().required(),
             name: Joi.string().required(),
@@ -32,28 +33,26 @@ describe('Housing API', () => {
             availableUnits: Joi.number().required(),
             wifi: Joi.boolean().optional(),
             laundry: Joi.boolean().optional(),
-          })
-          .done(done);
+          });
       });
 
-      it('returns "Acme Fresh Start Housing"', (done):any => {
+      it('returns "Acme Fresh Start Housing"', (): any => {
         return frisby
           .get(url)
           .expect('status', 200)
-          .expect('header', 'Content-Type', 'application/json')
+          .expect('header', 'Content-Type', headers['Content-Type'])
           .inspectJSON()
           .expect('json', {
-            "id": 0,
-            "name": "Acme Fresh Start Housing",
-            "city": "Chicago",
+            id: 0,
+            name: 'Acme Fresh Start Housing',
+            city: 'Chicago',
             // "state": "AZ", // uncomment to see the error
-            "state": "IL",
+            state: 'IL',
             // "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-            "availableUnits": 4,
-            "wifi": true,
-            "laundry": true
-          })
-          .done(done);
+            availableUnits: 4,
+            wifi: true,
+            laundry: true,
+          });
       });
     });
   });
