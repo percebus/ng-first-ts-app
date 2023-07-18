@@ -46,7 +46,7 @@ describe('Housing API', () => {
             id: 0,
             name: 'Acme Fresh Start Housing',
             city: 'Chicago',
-            // "state": "AZ", // uncomment to see the error
+            // state: "AZ", // uncomment to see the error
             state: 'IL',
             // "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
             availableUnits: 4,
